@@ -48,6 +48,7 @@ gluster-binary-path = "gluster"
 #gd1-remote-host = "localhost"
 gd2-rest-endpoint = "http://127.0.0.1:24007"
 port = 9713
+address = "127.0.0.1"
 metrics-path = "/metrics"
 log-dir = "/var/log"
 log-file = "gluster-exporter.log"
