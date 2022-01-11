@@ -140,8 +140,9 @@ func main() {
 
 	metricsPath := exporterConf.MetricsPath
 	port := exporterConf.Port
+	address := exporterConf.ListenAddress
 	http.Handle(metricsPath, promhttp.Handler())
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf("%s:%d", address, port), nil); err != nil {
 		_, _ = fmt.Fprintf(os.Stderr, "Failed to run exporter\nError: %s", err)
 		log.WithError(err).Fatal("Failed to run exporter")
 	}
