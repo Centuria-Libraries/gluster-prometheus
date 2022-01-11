@@ -28,6 +28,7 @@ type GConfig struct {
 
 // Globals maintains the global system configurations
 type Globals struct {
+	ListenAddress     string   `toml:"address"`
 	Port              int      `toml:"port"`
 	MetricsPath       string   `toml:"metrics-path"`
 	LogDir            string   `toml:"log-dir"`
